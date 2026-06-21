@@ -217,10 +217,10 @@
             }
 
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('./sw.js')
+                navigator.serviceWorker.register('/chatshooters/sw.js')
                 .then(reg => { 
                     swRegistration = reg;
-                    sincronizarUsuarioConSW();
+                    setTimeout(sincronizarUsuarioConSW, 1000);
                 });
             }
         });

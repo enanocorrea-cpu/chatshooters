@@ -439,7 +439,25 @@
         }
     </script>
 </body>
-<script type="module">
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDoeAo6FTBid6Eq_PerCg_I955jD4iFw_4",
+  authDomain: "chatshooters-e4a81.firebaseapp.com",
+  databaseURL: "https://chatshooters-e4a81-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "chatshooters-e4a81",
+  storageBucket: "chatshooters-e4a81.firebasestorage.app",
+  messagingSenderId: "836801092824",
+  appId: "1:836801092824:web:e1c635dbea8d181a170bad"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+    <script type="module">
   // Importa las librerías necesarias de Firebase
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";

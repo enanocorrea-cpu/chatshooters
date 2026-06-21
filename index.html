@@ -439,4 +439,33 @@
         }
     </script>
 </body>
-</html>
+<script type="module">
+  // Importa las librerías necesarias de Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+  import { getDatabase } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+  // Aquí pegas tu configuración que sacaste de la consola de Firebase
+  const firebaseConfig = {
+    apiKey: "TU_API_KEY",
+    authDomain: "chatshooters-e4a81.firebaseapp.com",
+    projectId: "chatshooters-e4a81",
+    storageBucket: "chatshooters-e4a81.appspot.com",
+    messagingSenderId: "TU_ID",
+    appId: "TU_APP_ID"
+  };
+
+  // Inicializa Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const database = getDatabase(app);
+
+  // Inicia sesión automáticamente para cumplir con la regla "auth != null"
+  signInAnonymously(auth)
+    .then(() => {
+      console.log("Chatshooters conectado y autenticado de forma segura");
+    })
+    .catch((error) => {
+      console.error("Error al conectar:", error);
+    });
+</script>

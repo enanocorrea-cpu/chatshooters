@@ -1,0 +1,17 @@
+{
+  "short_name": "Chatshooters",
+  "name": "Chatshooters Tactical Network",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/545/545241.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#0b0f12",
+  "theme_color": "#00ff66",
+  "display": "standalone",
+  "orientation": "portrait"
+}
